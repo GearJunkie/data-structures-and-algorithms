@@ -23,7 +23,7 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
-  let newArr = arr.sort( (a, b) => a.upper() > b.upper() ? -1 : b.lower() > a.lower() ? 1 : 0);
+  let newArr = arr.map( (value, idx) => callback(value))
   return newArr;
 };
 
@@ -88,7 +88,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  let newArr = arr.sort( (a, b) => a.toLowerCase() > b.toLowerCase() ? -1 : b.toLowerCase() > a.toLowerCase() ? 1 : 0);
+  let newArr = arr.sort();
   return newArr;
 };
 
@@ -108,7 +108,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  let newArr = arr.sort( (a, b) => a - b);
+  let newArr = arr.sort( (a, b) => a.price - b.price);
   return newArr;
 };
 
