@@ -50,6 +50,8 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let regex = /\w\d/g;
+  return regex.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,6 +97,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let regex = /^[0-9]{10}$/g;
+  return regex.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
